@@ -4,6 +4,7 @@
         <style>
             body {
                 margin: 0;
+                overflow: hidden;
             }
             #canvas2d {
                 width: 100%;
@@ -22,7 +23,8 @@
 
             import main from "./main.js";
 
-            let canvas = document.getElementById("canvas2d");
+            //let canvas = document.getElementById("canvas2d");
+            let canvas = document.querySelector("#canvas2d");
 
             main(canvas);
 

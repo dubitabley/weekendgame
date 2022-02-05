@@ -9,7 +9,7 @@ function mouse_down(e) {
 function mouse_move(e) {
     if (is_mouse_down) {
         let cat = get_cat();
-        cat.add_speed(e.movementX, e.movementY);
+        cat.add_speed(e.movementX, -e.movementY);
     }
 }
 

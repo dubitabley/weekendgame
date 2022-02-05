@@ -2,7 +2,7 @@ import { CANVAS_HEIGHT, CANVAS_WIDTH } from "./main.js";
 import { AABB, Vector2 } from "./misc.js";
 
 const SPEED = 10;
-const GRAVITY = 1;
+const GRAVITY = 0.01;
 const MAX_FALLING_SPEED = -20;
 
 const States = {
@@ -62,11 +62,11 @@ Cat.prototype.draw = function(ctx) {
 
 Cat.prototype.add_speed = function(x_amount, y_amount) {
     if (this.grounded) {
-        this.speed.x += x_amount * 0.3;
-        this.speed.y += y_amount * 0.3;
-    } else {
         this.speed.x += x_amount * 0.1;
         this.speed.y += y_amount * 0.1;
+    } else {
+        this.speed.x += x_amount * 0.01;
+        this.speed.y += y_amount * 0.01;
     }
 }
 
@@ -86,7 +86,7 @@ Cat.prototype.add_speed = function(x_amount, y_amount) {
 async function load_cat(path) {
     let response = await fetch(path);
     let text = await response.text();
-    document.body.innerHTML += text;
+    document.body.insertAdjacentHTML('beforeend', text);
     let svg_cat = document.getElementById("svg_cat");
     svg_cat.style.position = "absolute";
 

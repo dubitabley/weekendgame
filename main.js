@@ -1,6 +1,7 @@
 import Cat, { load_cat } from "./cat.js";
 import { Animations } from "./animation.js";
 import { add_events } from "./input.js";
+import Wall from "./wall.js";
 
 var screen_canvas;
 var screen_ctx;
@@ -11,6 +12,8 @@ var ctx;
 var cat;
 
 var last_time;
+
+var walls = [];
 
 const CANVAS_WIDTH = 900;
 const CANVAS_HEIGHT = 700;
@@ -34,9 +37,15 @@ async function main(canvas2d) {
 
     add_events();
 
+    setup_walls();
+
     last_time = performance.now();
 
     update();
+}
+
+function setup_walls() {
+    walls.push(new Wall(100, 100, 100, 20));
 }
 
 function get_cat() {
@@ -56,6 +65,9 @@ function update() {
 
 function draw() {
     cat.draw(ctx);
+    for (let wall of walls) {
+        wall.draw(ctx);
+    }
 
     screen_ctx.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, screen_canvas.width, screen_canvas.height);
 }
