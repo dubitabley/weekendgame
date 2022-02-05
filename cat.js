@@ -1,4 +1,16 @@
+import { CANVAS_HEIGHT, CANVAS_WIDTH } from "./main.js";
 import { AABB, Vector2 } from "./misc.js";
+
+const SPEED = 10;
+const GRAVITY = 1;
+const MAX_FALLING_SPEED = -20;
+
+const States = {
+    Idle: 1,
+    Falling: 2,
+    Jumping: 3,
+    Sliding: 4,
+};
 
 function Cat(x, y, width, height, svg) {
     this.svg = svg;
@@ -11,31 +23,51 @@ function Cat(x, y, width, height, svg) {
     this.right_wall = false;
     this.ceiling = false;
 
+    this.state = States.Idle;
+
     this.animations = [];
 }
 
 Cat.prototype.set_svg = function() {
-    this.svg.style.left = this.AABB.x + "px";
-    this.svg.style.top = this.AABB.y + "px";
-    this.svg.style.width = this.AABB.width + "px";
-    this.svg.style.height = this.AABB.height + "px";
+    this.svg.style.left = (this.AABB.x - this.AABB.half_width) + "px";
+    this.svg.style.top = ((CANVAS_HEIGHT - this.AABB.y) - this.AABB.half_height) + "px";
+    this.svg.style.width = ((CANVAS_WIDTH/window.innerWidth) * this.AABB.width) + "px";
+    this.svg.style.height = ((CANVAS_HEIGHT/window.innerHeight) * this.AABB.height) + "px";
 }
 
 Cat.prototype.update = function(delta_time) {
     this.AABB.x += this.speed.x * delta_time;
     this.AABB.y += this.speed.y * delta_time;
 
-    if (this.AABB.y < 0) {
-        this.AABB.y = 0;
+    this.speed.y = Math.max(MAX_FALLING_SPEED, this.speed.y - GRAVITY * delta_time);
+
+    this.speed.x *= 0.8;
+    this.speed.y *= 0.8;
+
+    if (this.AABB.y < this.AABB.half_height) {
+        this.AABB.y = this.AABB.half_height;
         this.grounded = true;
     } else {
         this.grounded = false;
     }
+
+    this.set_svg();
+    
 }
 
 Cat.prototype.draw = function(ctx) {
     //ctx.drawImage(this.svg, this.AABB.x, this.AABB.y, this.AABB.width, this.AABB.height);
 
+}
+
+Cat.prototype.add_speed = function(x_amount, y_amount) {
+    if (this.grounded) {
+        this.speed.x += x_amount * 0.3;
+        this.speed.y += y_amount * 0.3;
+    } else {
+        this.speed.x += x_amount * 0.1;
+        this.speed.y += y_amount * 0.1;
+    }
 }
 
 
