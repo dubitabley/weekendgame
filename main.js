@@ -1,4 +1,5 @@
 import Cat, { load_cat } from "./cat.js";
+import { Animations } from "./animation.js";
 
 var canvas;
 var ctx;
@@ -17,6 +18,7 @@ async function main(canvas2d) {
     let cat_svg = await load_cat("./cats/cat2.svg");
 
     cat = new Cat(100, 100, 500, 300, cat_svg);
+    cat.start_animation(Animations.Walking);
 
     last_time = performance.now();
 
