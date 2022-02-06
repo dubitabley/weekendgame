@@ -6,6 +6,7 @@ function Wall(x, y, width, height) {
 }
 
 Wall.prototype.draw = function(ctx) {
+    ctx.beginPath();
     ctx.rect(this.x, this.y, this.width, this.height);
     ctx.fill();
 }

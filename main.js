@@ -46,6 +46,7 @@ async function main(canvas2d) {
 
 function setup_walls() {
     walls.push(new Wall(100, 100, 100, 20));
+    walls.push(new Wall(100, 100, 50, 50));
 }
 
 function get_cat() {
@@ -64,11 +65,27 @@ function update() {
 }
 
 function draw() {
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+    //flip upside down lol
+    ctx.transform(1, 0, 0, -1, 0, CANVAS_HEIGHT);
+
+    //so cat is in centre
+    ctx.translate(-cat.AABB.x + CANVAS_WIDTH/2, -cat.AABB.y + CANVAS_HEIGHT/2);
+
+    //ctx.clearRect(cat.AABB.x - CANVAS_WIDTH/2, cat.AABB.y - CANVAS_HEIGHT/2, CANVAS_WIDTH, CANVAS_HEIGHT);
+
+    //ctx.rect(cat.AABB.x - CANVAS_WIDTH/2, cat.AABB.y - CANVAS_HEIGHT/2, CANVAS_WIDTH, CANVAS_HEIGHT);
+    //ctx.fill();
+    //ctx.clearRect(cat.AABB.x - CANVAS_WIDTH/2, cat.AABB.y - CANVAS_HEIGHT/2, CANVAS_WIDTH, CANVAS_HEIGHT);
+
     cat.draw(ctx);
     for (let wall of walls) {
         wall.draw(ctx);
     }
 
+    screen_ctx.clearRect(0, 0, screen_canvas.width, screen_canvas.height);
     screen_ctx.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, screen_canvas.width, screen_canvas.height);
 }
 

@@ -28,9 +28,16 @@ function Cat(x, y, width, height, svg) {
     this.animations = [];
 }
 
-Cat.prototype.set_svg = function() {
+/* Cat.prototype.set_svg = function() {
     this.svg.style.left = (this.AABB.x - this.AABB.half_width) + "px";
     this.svg.style.top = ((CANVAS_HEIGHT - this.AABB.y) - this.AABB.half_height) + "px";
+    this.svg.style.width = ((CANVAS_WIDTH/window.innerWidth) * this.AABB.width) + "px";
+    this.svg.style.height = ((CANVAS_HEIGHT/window.innerHeight) * this.AABB.height) + "px";
+} */
+
+Cat.prototype.set_svg = function() {
+    this.svg.style.left = (window.innerWidth/2 - this.AABB.half_width) + "px";
+    this.svg.style.top = (window.innerHeight/2 - this.AABB.half_height) + "px";
     this.svg.style.width = ((CANVAS_WIDTH/window.innerWidth) * this.AABB.width) + "px";
     this.svg.style.height = ((CANVAS_HEIGHT/window.innerHeight) * this.AABB.height) + "px";
 }
@@ -57,7 +64,7 @@ Cat.prototype.update = function(delta_time) {
 
 Cat.prototype.draw = function(ctx) {
     //ctx.drawImage(this.svg, this.AABB.x, this.AABB.y, this.AABB.width, this.AABB.height);
-
+    
 }
 
 Cat.prototype.add_speed = function(x_amount, y_amount) {
