@@ -15,7 +15,6 @@ const States = {
 function Cat(x, y, width, height, svg) {
     this.svg = svg;
     this.AABB = new AABB(x, y, width, height);
-    this.set_svg();
 
     this.speed = new Vector2(0, 0);
     this.grounded = false;
@@ -35,11 +34,24 @@ function Cat(x, y, width, height, svg) {
     this.svg.style.height = ((CANVAS_HEIGHT/window.innerHeight) * this.AABB.height) + "px";
 } */
 
-Cat.prototype.set_svg = function() {
-    this.svg.style.left = (window.innerWidth/2 - this.AABB.half_width) + "px";
-    this.svg.style.top = (window.innerHeight/2 - this.AABB.half_height) + "px";
-    this.svg.style.width = ((CANVAS_WIDTH/window.innerWidth) * this.AABB.width) + "px";
-    this.svg.style.height = ((CANVAS_HEIGHT/window.innerHeight) * this.AABB.height) + "px";
+Cat.prototype.set_pos = function(x_translate, y_translate) {
+
+    let x_ratio = window.innerWidth/CANVAS_WIDTH;
+    let y_ratio = window.innerHeight/CANVAS_HEIGHT;
+    //if 0,
+    if (x_translate == 0) {
+        this.svg.style.left = (x_ratio * (this.AABB.x - this.AABB.half_width)) + "px";
+    } else {
+        this.svg.style.left = (window.innerWidth/2 - x_ratio * this.AABB.half_width) + "px";
+    }
+
+    if (y_translate == 0) {
+        this.svg.style.top = (y_ratio * (CANVAS_HEIGHT - this.AABB.y - this.AABB.half_height)) + "px";
+    } else {
+        this.svg.style.top = (window.innerHeight/2 - y_ratio * this.AABB.half_height) + "px";
+    }
+    this.svg.style.width = (x_ratio * this.AABB.width) + "px";
+    this.svg.style.height = (y_ratio * this.AABB.height) + "px";
 }
 
 Cat.prototype.update = function(delta_time) {
@@ -58,7 +70,9 @@ Cat.prototype.update = function(delta_time) {
         this.grounded = false;
     }
 
-    this.set_svg();
+    if (this.AABB.x < this.AABB.half_width) {
+        this.AABB.x = this.AABB.half_width;
+    }
     
 }
 

@@ -32,7 +32,7 @@ async function main(canvas2d) {
 
     let cat_svg = await load_cat("./cats/cat2.svg");
 
-    cat = new Cat(100, 100, 500, 300, cat_svg);
+    cat = new Cat(100, 100, 300, 200, cat_svg);
     cat.start_animation(Animations.Walking);
 
     add_events();
@@ -45,6 +45,7 @@ async function main(canvas2d) {
 }
 
 function setup_walls() {
+    walls.push(new Wall(-100, 0, 100, 100000));
     walls.push(new Wall(100, 100, 100, 20));
     walls.push(new Wall(100, 100, 50, 50));
 }
@@ -71,8 +72,20 @@ function draw() {
     //flip upside down lol
     ctx.transform(1, 0, 0, -1, 0, CANVAS_HEIGHT);
 
-    //so cat is in centre
-    ctx.translate(-cat.AABB.x + CANVAS_WIDTH/2, -cat.AABB.y + CANVAS_HEIGHT/2);
+    let x_translate = -cat.AABB.x + CANVAS_WIDTH/2;
+    let y_translate = -cat.AABB.y + CANVAS_HEIGHT/2;
+    if (cat.AABB.x < CANVAS_WIDTH/2) {
+        //x_translate = -CANVAS_WIDTH/2;
+        x_translate = 0;
+    }
+    if (cat.AABB.y < CANVAS_HEIGHT/2) {
+        //y_translate = -CANVAS_HEIGHT/2;
+        y_translate = 0;
+    }
+
+    cat.set_pos(x_translate, y_translate);
+
+    ctx.translate(x_translate, y_translate);
 
     //ctx.clearRect(cat.AABB.x - CANVAS_WIDTH/2, cat.AABB.y - CANVAS_HEIGHT/2, CANVAS_WIDTH, CANVAS_HEIGHT);
 
