@@ -15,7 +15,7 @@ var last_time;
 
 var walls = [];
 
-const CANVAS_WIDTH = 900;
+const CANVAS_WIDTH = 1300;
 const CANVAS_HEIGHT = 700;
 
 async function main(canvas2d) {
@@ -30,9 +30,9 @@ async function main(canvas2d) {
     canvas.height = CANVAS_HEIGHT;
     ctx = canvas.getContext("2d");
 
-    let cat_svg = await load_cat("./cats/cat2.svg");
+    let cat_svg = await load_cat("./cats/cat.svg");
 
-    cat = new Cat(100, 100, 300, 200, cat_svg);
+    cat = new Cat(100, 100, 250, 200, cat_svg);
     cat.start_animation(Animations.Walking);
 
     add_events();

@@ -7,15 +7,15 @@ var Animations = {
 var walking_anim = {
     anim: [
         { 
-            transform: 'rotate(-20deg)',
+            transform: 'rotate(-10deg)',
             transformOrigin: 'top',
         },
         { 
-            transform: 'rotate(20deg)',
+            transform: 'rotate(10deg)',
             transformOrigin: 'top',
         },
         { 
-            transform: 'rotate(-20deg)',
+            transform: 'rotate(-10deg)',
             transformOrigin: 'top',
         },
     ],
@@ -40,6 +40,9 @@ Cat.prototype.update_animations = function(delta_time) {
 
 function walking_animation(cat_svg) {
     cat_svg.querySelector("#leg1").animate(walking_anim.anim, walking_anim.timing);
+    cat_svg.querySelector("#leg2").animate(walking_anim.anim, walking_anim.timing);
+    cat_svg.querySelector("#leg3").animate(walking_anim.anim, walking_anim.timing);
+    cat_svg.querySelector("#leg4").animate(walking_anim.anim, walking_anim.timing);
 }
 
 function update_animations() {

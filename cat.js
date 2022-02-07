@@ -50,8 +50,8 @@ Cat.prototype.set_pos = function(x_translate, y_translate) {
     } else {
         this.svg.style.top = (window.innerHeight/2 - y_ratio * this.AABB.half_height) + "px";
     }
-    this.svg.style.width = (x_ratio * this.AABB.width) + "px";
-    this.svg.style.height = (y_ratio * this.AABB.height) + "px";
+    this.svg.setAttribute("width", x_ratio * this.AABB.width);
+    this.svg.setAttribute("height", y_ratio * this.AABB.height);
 }
 
 Cat.prototype.update = function(delta_time) {
@@ -66,12 +66,14 @@ Cat.prototype.update = function(delta_time) {
     if (this.AABB.y < this.AABB.half_height) {
         this.AABB.y = this.AABB.half_height;
         this.grounded = true;
+        this.speed.y = 0;
     } else {
         this.grounded = false;
     }
 
     if (this.AABB.x < this.AABB.half_width) {
         this.AABB.x = this.AABB.half_width;
+        this.speed.x = 0;
     }
     
 }

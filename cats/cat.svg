@@ -1,0 +1,53 @@
+<svg id="svg_cat" width="218.64mm" height="206.21mm" version="1.1" viewBox="0 0 218.64 206.21" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+ <g id="cat" transform="translate(-124.83 -215.1)">
+  <g id="right_legs" fill="#fff" stroke="#000" stroke-width="5">
+   <path id="leg4" d="m329.46 342.86-17.411 9.375s2.6786 72.321 17.411 56.25c14.732-16.071-1e-5-65.625-1e-5-65.625z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   <path id="leg3" d="m282.59 364.29 21.429-8.0357s9.375 83.036-13.393 56.25c-22.768-26.786-8.0357-48.214-8.0357-48.214z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+  </g>
+  <g id="left_legs" fill="#fff" stroke="#000" stroke-width="5">
+   <path id="leg2" d="m241.07 368.3-24.107-2.6786s-2.6786 69.643 16.071 49.554c18.75-20.089 8.0357-46.875 8.0357-46.875z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   <path id="leg1" d="m184.82 352.23 22.768 10.714s2.6786 65.625-17.411 49.554c-20.089-16.071-5.3571-60.268-5.3571-60.268z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+  </g>
+  <g id="body">
+   <path id="body_outline" d="m204.46 286.83s48.214-7.3661 104.46 3.3482c56.25 10.714 37.5 66.964-48.214 77.679-85.714 10.714-128.57-62.277-56.25-81.027z" fill="#fff" stop-color="#000000" stroke="#000" stroke-width="5" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   <path id="back_colouring1" d="m212.95 309.82s18.75 20.982 40.179 8.9286 50.223-4.0178 50.223-4.0178c38.839 10.045 34.152-3.683 34.152-3.683l-.78126-3.3482-6.0268-6.6964-13.728-7.0312-20.424-3.683-32.478-3.683-22.545-1.6741-22.768 2.0089z" fill="#fb9b67" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   <g fill="#150400">
+    <path id="back_colouring2" d="m218.75 286.94-3.7946 12.723s9.7098-7.7009 18.75-7.3661c9.0402.33483 15.402-7.7009 10.379-8.7054-5.0223-1.0045-25.335 3.3482-25.335 3.3482z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+    <path id="back_colouring3" d="m261.5 284.15s-35.156 22.098-7.3661 19.754c27.79-2.3437 28.795-6.3616 23.103-8.7053-5.692-2.3438-8.7053 2.3438-14.062-1.3393-5.3571-3.683 13.728-8.0357 13.728-8.0357z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+    <path id="back_colouring4" d="m302.9 302.9s-6.0268-8.0357-15.402-10.045c-9.375-2.0089-6.6964-6.6964-1.3393-6.6964s24.107 4.0179 24.107 4.0179 15.402 6.6964 8.7054 10.714c-6.6964 4.0179-16.071 2.0089-16.071 2.0089z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   </g>
+  </g>
+  <g id="head">
+   <g stroke="#000">
+    <path id="ear_right" d="m192.89 244.05 15.626 7.5761 9.9437-35.513z" fill="#fb9b67" stop-color="#000000" stroke-width="3" style="font-variation-settings:normal"/>
+    <path id="ear_left" d="m156.53 256.45-12.388-34.152 27.121 25.446z" fill="#150400" stop-color="#000000" stroke-width="3" style="font-variation-settings:normal"/>
+    <path id="head_outline" d="m194.48 321.52c38.839-20.089 20.089-65.625 5.3572-72.321-14.732-6.6964-41.518 0-48.214 18.75-6.6964 18.75-8.0357 38.839 1.3393 46.875 9.375 8.0357 41.518 6.6964 41.518 6.6964z" fill="#fff" stop-color="#000000" stroke-width="5" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   </g>
+   <g id="mouth">
+    <path id="mouthpart_left" d="m179.52 290.27s-1.6741 15.402-13.058 6.0268" fill="none" stop-color="#000000" stroke="#000" stroke-width="2" style="font-variation-settings:normal"/>
+    <path id="mouthpart_right" d="m179.52 290.27s9.375 15.067 13.728 5.0223" fill="none" stop-color="#000000" stroke="#000" stroke-width="2" style="font-variation-settings:normal"/>
+    <path id="mouthpart" d="m179.19 284.58c5.3572-.33482 4.6875 7.0312.33483 6.6964-4.3527-.3348-4.6875-6.0268-.33483-6.6964z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   </g>
+   <g id="whiskers_left" fill="none" stroke="#000" stroke-width="2">
+    <path id="whisker_left1" d="m152.99 295.49s-24.498-5.4968-27.008 6.9942" stop-color="#000000" style="font-variation-settings:normal"/>
+    <path id="whisker_left2" d="m153.63 298.75s-28.46 3.683-27.79 16.406" stop-color="#000000" style="font-variation-settings:normal"/>
+    <path id="whisker_left3" d="m154.6 302.14s-23.349 7.5301-17.471 19.73" stop-color="#000000" style="font-variation-settings:normal"/>
+   </g>
+   <g id="whiskers_right" fill="none" stroke="#000" stroke-width="2">
+    <path id="whisker_right3" d="m204.59 292.97s22.698 1.832 24.124 14.945" stop-color="#000000" style="font-variation-settings:normal"/>
+    <path id="whisker_right2" d="m204.41 290.16s23.675-9.4702 31.252 11.364" stop-color="#000000" style="font-variation-settings:normal"/>
+    <path id="whisker_right1" d="m204.46 286.83s25.097-10.31 33.244 5.3939" stop-color="#000000" style="font-variation-settings:normal"/>
+   </g>
+   <path id="head_colouring_right" d="m192.89 247.07 11.13 4.4963 10.714 16.741 2.6786 12.723s-12.645-.12796-20.089.66963c-9.375 1.0045-13.058-2.3438-13.058-2.3438-8.0357-7.3661-3.0134-18.415-3.0134-18.415z" fill="#fb9b67" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   <path id="head_colouring_left" d="m192.89 247.07s.41546 13.871-4.9417 15.211c-5.3572 1.3393-2.6786 14.062-4.6875 15.402-2.0089 1.3393-14.062 14.732-22.768 11.384s-13.393-.66963-13.393-.66963.50837-47.832 45.79-41.327z" fill="#150400" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   <g id="eye_left">
+    <path id="eye_outline_left" d="m160.32 272.19c3.3482-8.7054 18.75-5.3571 18.75-1.3393 0 4.0178-17.411 8.7054-18.75 1.3393z" fill="#fff" stop-color="#000000" stroke="#000" stroke-width="2" style="font-variation-settings:normal"/>
+    <path id="eye_pupil_left" d="m169.59 266.72c-5.692.33482-3.0134 9.375-1.0045 9.375 2.0089 0 4.0179-6.6964 1.0045-9.375z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   </g>
+   <g id="eye_right">
+    <path id="eye_outline_right" d="m186.1 271.52c-.33482-8.3705 17.411-5.692 17.746-.66964.33482 5.0223-18.08 6.3616-17.746.66964z" fill="#fff" stop-color="#000000" stroke="#000" stroke-width="2" style="font-variation-settings:normal"/>
+    <path id="eye_pupil_right" d="m195.03 266.05c-5.3572 0-4.3527 9.375-.66965 9.0402 3.683-.33481.66965-9.0402.66965-9.0402z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   </g>
+  </g>
+ </g>
+</svg>
