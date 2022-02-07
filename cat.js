@@ -12,6 +12,11 @@ const States = {
     Sliding: 4,
 };
 
+const Directions = {
+    Left: 1,
+    Right: 2,
+};
+
 function Cat(x, y, width, height, svg) {
     this.svg = svg;
     this.AABB = new AABB(x, y, width, height);
@@ -21,6 +26,8 @@ function Cat(x, y, width, height, svg) {
     this.left_wall = false;
     this.right_wall = false;
     this.ceiling = false;
+
+    this.direction = Directions.Right
 
     this.state = States.Idle;
 
@@ -50,7 +57,19 @@ Cat.prototype.set_pos = function(x_translate, y_translate) {
     } else {
         this.svg.style.top = (window.innerHeight/2 - y_ratio * this.AABB.half_height) + "px";
     }
-    this.svg.setAttribute("width", x_ratio * this.AABB.width);
+
+    let width = x_ratio * this.AABB.width;
+
+    switch (this.direction) {
+        case Directions.Left:
+            this.svg.setAttribute("transform", "");
+            break;
+        case Directions.Right:
+            this.svg.setAttribute("transform", "scale(-1, 1)");
+            break;
+    }
+
+    this.svg.setAttribute("width", width);
     this.svg.setAttribute("height", y_ratio * this.AABB.height);
 }
 
@@ -74,6 +93,12 @@ Cat.prototype.update = function(delta_time) {
     if (this.AABB.x < this.AABB.half_width) {
         this.AABB.x = this.AABB.half_width;
         this.speed.x = 0;
+    }
+
+    if (this.speed.x > 0) {
+        this.direction = Directions.Right;
+    } else if (this.speed.x < 0) {
+        this.direction = Directions.Left;
     }
     
 }

@@ -1,12 +1,12 @@
 <svg id="svg_cat" width="218.64mm" height="206.21mm" version="1.1" viewBox="0 0 218.64 206.21" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
  <g id="cat" transform="translate(-124.83 -215.1)">
-  <g id="right_legs" fill="#fff" stroke="#000" stroke-width="5">
-   <path id="leg4" d="m329.46 342.86-17.411 9.375s2.6786 72.321 17.411 56.25c14.732-16.071-1e-5-65.625-1e-5-65.625z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
-   <path id="leg3" d="m282.59 364.29 21.429-8.0357s9.375 83.036-13.393 56.25c-22.768-26.786-8.0357-48.214-8.0357-48.214z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+  <g id="right_legs" stroke="#000" stroke-width="5">
+   <path id="leg4" d="m320.09 345.54-17.411 9.375s2.6786 72.321 17.411 56.25c14.732-16.071-1e-5-65.625-1e-5-65.625z" fill="#808080" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   <path id="leg3" d="m290.62 360.27 21.429-8.0357s9.375 83.036-13.393 56.25c-22.768-26.786-8.0357-48.214-8.0357-48.214z" fill="#fff" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
   </g>
-  <g id="left_legs" fill="#fff" stroke="#000" stroke-width="5">
-   <path id="leg2" d="m241.07 368.3-24.107-2.6786s-2.6786 69.643 16.071 49.554c18.75-20.089 8.0357-46.875 8.0357-46.875z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
-   <path id="leg1" d="m184.82 352.23 22.768 10.714s2.6786 65.625-17.411 49.554c-20.089-16.071-5.3571-60.268-5.3571-60.268z" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+  <g id="left_legs" stroke="#000" stroke-width="5">
+   <path id="leg2" d="m218.3 365.62-24.107-2.6786s-2.6786 69.643 16.071 49.554c18.75-20.089 8.0357-46.875 8.0357-46.875z" fill="#808080" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
+   <path id="leg1" d="m184.82 352.23 22.768 10.714s2.6786 65.625-17.411 49.554c-20.089-16.071-5.3571-60.268-5.3571-60.268z" fill="#fff" stop-color="#000000" style="-inkscape-stroke:none;font-variation-settings:normal"/>
   </g>
   <g id="body">
    <path id="body_outline" d="m204.46 286.83s48.214-7.3661 104.46 3.3482c56.25 10.714 37.5 66.964-48.214 77.679-85.714 10.714-128.57-62.277-56.25-81.027z" fill="#fff" stop-color="#000000" stroke="#000" stroke-width="5" style="-inkscape-stroke:none;font-variation-settings:normal"/>

@@ -37,7 +37,7 @@ async function main(canvas2d) {
 
     add_events();
 
-    setup_walls();
+    //setup_walls();
 
     last_time = performance.now();
 
